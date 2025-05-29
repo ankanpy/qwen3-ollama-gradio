@@ -29,18 +29,6 @@ This Gradio application allows interaction with multiple LLMs hosted by an Ollam
     ```
 4.  Open your browser and navigate to `http://localhost:7860`.
 
-## Deploying to Hugging Face Spaces
-
-1.  Push this repository (including `Dockerfile`, `app.py`, `requirements.txt`) to GitHub or Hugging Face Hub.
-2.  Create a new Space on Hugging Face:
-    - SDK: Docker
-    - Docker template: Blank
-    - Hardware: Choose appropriate (CPU basic for small models, may need GPU for larger/faster inference).
-3.  In the Space settings (under "Repository secrets" or "Variables and Secrets"), set a **Build-time variable**:
-    - **Name:** `OLLAMA_PULL_MODELS`
-    - **Value:** A space-separated list of models you want in the Space (e.g., `qwen3:8b qwen2:7b mistral:7b`). **Make sure any models referenced in your `app.py` (like `qwen3:8b` or `qwen3:4b` in examples) are included here.**
-4.  The Space will build the Docker image (this can take a long time depending on model sizes) and then run the application.
-
 ## Customization
 
 -   **Models:** Modify the `OLLAMA_PULL_MODELS` build argument or Space variable to include different Ollama models.
