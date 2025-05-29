@@ -19,7 +19,7 @@ This Gradio application allows interaction with multiple LLMs hosted by an Ollam
     To specify which models to pull during the build (space-separated):
     ```bash
     # Replace with models relevant to "qwen3" or other models you use
-    docker build --build-arg OLLAMA_PULL_MODELS="qwen3:8b qwen3:4b-chat" -t qwen3-ollama-gradio-app .
+    docker build --build-arg OLLAMA_PULL_MODELS="qwen3:8b qwen3:4b" -t qwen3-ollama-gradio-app .
     ```
     The default models are defined in the `Dockerfile`'s `ARG OLLAMA_PULL_MODELS`. Ensure `qwen3:8b` or other models used in examples are included if you want examples to work out-of-the-box.
 
